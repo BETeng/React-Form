@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 
 class Form extends Component {
-
     constructor(props) {
         super(props)
-
         this.state = {
             username: ''
         }
@@ -17,7 +15,6 @@ class Form extends Component {
     }
 
     handleSubmit = event => {
-        
         this.setState({
             username: ''
         })
@@ -27,7 +24,7 @@ class Form extends Component {
 
     render() {
         return (
-            <form onSubmit = {this.handleSubmit}>
+            <form onSubmit={this.handleSubmit}>
                 <div>
                     <label>Username</label>
                     <input
