@@ -16,9 +16,18 @@ class Form extends Component {
         })
     }
 
+    handleSubmit = event => {
+        
+        this.setState({
+            username: ''
+        })
+        console.log(this.state.username);
+        event.preventDefault();
+    }
+
     render() {
         return (
-            <form>
+            <form onSubmit = {this.handleSubmit}>
                 <div>
                     <label>Username</label>
                     <input
@@ -26,14 +35,12 @@ class Form extends Component {
                         value={this.state.username}
                         onChange={this.handleUsernameChange}>
                     </input>
+                    <input type="submit"></input>
                 </div>
             </form>
         )
     }
 }
-
-
-
 
 
 export default Form;
